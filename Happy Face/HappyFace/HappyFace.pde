@@ -8,6 +8,7 @@ float mouthX1, mouthY1, mouthX2, mouthY2, mouthThick;
 color red = #FF0303;
 color measlesColor = red;
 float measlesX, measlesY, measlesDiameter;
+
 void setup() {
   size (900, 600);
   //fullScreen();
@@ -15,25 +16,27 @@ void setup() {
   //
   population();
   //
-  ellipse(faceX, faceY, faceDiameter, faceDiameter);
-  ellipse(leftEyeX, leftEyeY, leftEyeDiameter, leftEyeDiameter);
-  ellipse(rightEyeX, rightEyeY, rightEyeDiameter, rightEyeDiameter);
-  triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
-  strokeWeight(mouthThick);
-  line(mouthX1, mouthY1, mouthX2, mouthY2);
-  strokeWeight(reset);
-  
-  fill(measlesColor);
-  ellipse(measlesX, measlesY, measlesDiameter);
-  fill(reset);
-  
+  faceDraw();
 }//End setup
 
-void draw() {}//End draw
+void draw() {
+  background(0);
+  faceDraw();
+  measlesX = random(width);
+  measlesY = random(height);
+  measlesDiameter = random(height*1/20, height*1/10);
+  fill(measlesColor);
+  //Parameters are randomly set ;)
+  ellipse(measlesX, measlesY, measlesDiameter, measlesDiameter);
+  fill(reset);
+  //Why is there only one measle being printed to the canvas
+}//End draw
 
 void keyPressed() {
   //Quit Keyboard Button
-  if(key == 'q' || key == 'Q') { exit();}//End IF
+  if (key == 'q' || key == 'Q') { 
+    exit();
+  }//End IF
 }//End keypressed
 
 void mousePressed() {
