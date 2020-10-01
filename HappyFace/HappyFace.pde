@@ -10,6 +10,10 @@ color measlesColor = red;
 color white = 255;
 color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
+int bTriangleX1, bTriangleY1, bTriangleX2, bTriangleY2, bTriangleX3, bTriangleY3;
+
+
+
 
 void setup() {
   size (700, 500);
@@ -23,7 +27,7 @@ void setup() {
 }//End setup
 
 void draw() {
-  measlesX = random(width);
+  measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
   measlesY = random(height);
   measlesDiameter = random(height*1/60, height*1/35);
   fill(measlesColor);
