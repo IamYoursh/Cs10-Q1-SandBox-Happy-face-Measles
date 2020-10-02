@@ -21,7 +21,7 @@ void draw() {
   } else {
     buttonColour = blue;
   }// End IF
-  //fill(); //blue all the time, red with Hoverover
+  fill(buttonColour); //blue all the time, red with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
 }//End draw
 
@@ -34,5 +34,6 @@ void keyPressed() {
 
 void mousePressed() {
   if ( mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4) {
+    exit();
   }//End IF, using mouseX & mouseY
 }//End mousePressed
