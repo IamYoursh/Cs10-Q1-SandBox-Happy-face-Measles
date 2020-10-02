@@ -20,5 +20,10 @@ void population() {
   mouthY2 = mouthY1;
   mouthThick = 15;
   reset = 1;
-
+  buttonX = width*15/16;
+  buttonY = height*0/12;
+  buttonWidth = width*1/16;
+  buttonHeight = height*1/14;
+  redTwo = #FF0505;
+  green = #00FF0A;
 }//End population

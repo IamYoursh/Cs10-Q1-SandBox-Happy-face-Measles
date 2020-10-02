@@ -11,8 +11,8 @@ color white = 255;
 color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
 int bTriangleX1, bTriangleY1, bTriangleX2, bTriangleY2, bTriangleX3, bTriangleY3;
-
-
+int buttonX, buttonY, buttonWidth, buttonHeight;
+color buttonColour, redTwo, green;
 
 
 void setup() {
@@ -27,6 +27,15 @@ void setup() {
 }//End setup
 
 void draw() {
+  //
+  if ( mouseX>buttonX && mouseX<width && mouseY>0 && mouseY<buttonHeight) {//Button Hoverever
+    buttonColour = red; //Hoverover
+  } else {
+    buttonColour = green;
+  }// End IF
+  fill(buttonColour); //blue all the time, red with Hoverover
+  rect(buttonX, buttonY, buttonWidth, buttonHeight);
+  //
   measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
   measlesY = random(height);
   measlesDiameter = random(height*1/60, height*1/35);
@@ -50,4 +59,7 @@ void keyPressed() {
 }//End keypressed
 
 void mousePressed() {
+  if ( mouseX>buttonX && mouseX<width && mouseY>0 && mouseY<buttonHeight) {
+    exit();
+  }//End IF, using mouseX & mouseY
 }//End mousePressed
