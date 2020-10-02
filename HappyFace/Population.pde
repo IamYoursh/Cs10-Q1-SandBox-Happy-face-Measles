@@ -26,4 +26,32 @@ void population() {
   buttonHeight = height*1/14;
   redTwo = #FF0505;
   green = #00FF0A;
+  
+  bTriangleOneX1 = ;
+  bTriangleOneY1 = ;
+  bTriangleOneX2 = ;
+  bTriangleOneY2 = ;
+  bTriangleOneX3 = ;
+  bTriangleOneY3 = ;
+  
+  bTriangleTwoX1 = ;
+  bTriangleTwoY1 = ;
+  bTriangleTwoX2 = ;
+  bTriangleTwoY2 = ;
+  bTriangleTwoX3 = ;
+  bTriangleTwoY3 = ;
+  
+  bTriangleTeeX1 = ;
+  bTriangleTeeY1 = ;
+  bTriangleTeeX2 = ;
+  bTriangleTeeY2 = ;
+  bTriangleTeeX3 = ;
+  bTriangleTeeY3 = ;
+  
+  bTriangleForX1 = ;
+  bTriangleForY1 = ;
+  bTriangleForX2 = ;
+  bTriangleForY2 = ;
+  bTriangleForX3 = ;
+  bTriangleForY3 = ;
 }//End population
