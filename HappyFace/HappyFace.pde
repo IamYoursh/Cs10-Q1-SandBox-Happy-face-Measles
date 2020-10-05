@@ -25,26 +25,30 @@ void setup() {
   size (700, 500);
   //fullScreen();
   println("Screen Width is", displayWidth, "Screen Height is", displayHeight);
+  //String[] fontList = PFont.list(); //To list fonts available on OS
+  //println("Start of Console");
+  //printArray(fontList);
   //
   population();
   //
   //faceDraw();
+  background(0);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
 }//End setup
 
 void draw() {
   //
-  if ( mouseX>buttonX && mouseX<width && mouseY>0 && mouseY<buttonHeight) {//Button Hoverever
+  if ( mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight) {//Button Hoverever
     buttonColour = red; //Hoverover
   } else {
     buttonColour = green;
   }// End IF
   fill(buttonColour); //blue all the time, red with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
-  fill();
+  fill(quitButtonColor);
   textAlign(CENTER, CENTER); //Aligns the X&Y
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(titleFont, 20);
+  textFont(titleFont, width*1/35);
   text(quit, width*1/4, height*0, width*1/2, height*1/10);
   fill(190); //Reset
   //
@@ -55,6 +59,7 @@ void draw() {
   //Parameters are randomly set ;)
   ellipse(measlesX, measlesY, measlesDiameter, measlesDiameter);
   fill(colorReset);
+  ellipse(faceX, faceY, faceDiameter, faceDiameter);
   ellipse(leftEyeX, leftEyeY, leftEyeDiameter, leftEyeDiameter);
   ellipse(rightEyeX, rightEyeY, rightEyeDiameter, rightEyeDiameter);
   triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
