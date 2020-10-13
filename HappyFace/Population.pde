@@ -28,12 +28,12 @@ void population() {
   green = #00FF0A;
   titleFont = createFont ("High Tower Text", 10); //Font size 10
   
-  bTriangleOneX1 = ;
-  bTriangleOneY1 = ;
-  bTriangleOneX2 = ;
-  bTriangleOneY2 = ;
-  bTriangleOneX3 = ;
-  bTriangleOneY3 = ;
+  //bTriangleOneX1 = ;
+  //bTriangleOneY1 = ;
+  //bTriangleOneX2 = ;
+  //bTriangleOneY2 = ;
+  //bTriangleOneX3 = ;
+  //bTriangleOneY3 = ;
   
   //bTriangleTwoX1 = ;
   //bTriangleTwoY1 = ;

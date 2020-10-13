@@ -34,6 +34,7 @@ void setup() {
   //faceDraw();
   background(0);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  //
 }//End setup
 
 void draw() {
@@ -52,13 +53,6 @@ void draw() {
   text(quit, buttonX, buttonY, buttonWidth, buttonHeight);
   fill(190); //Reset
   //
-    measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
-  measlesY = random(height);
-  measlesDiameter = random(height*1/60, height*1/35);
-  fill(measlesColor);
-  //Parameters are randomly set ;)
-  ellipse(measlesX, measlesY, measlesDiameter, measlesDiameter);
-  fill(colorReset);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
   ellipse(leftEyeX, leftEyeY, leftEyeDiameter, leftEyeDiameter);
   ellipse(rightEyeX, rightEyeY, rightEyeDiameter, rightEyeDiameter);
@@ -66,6 +60,13 @@ void draw() {
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
+  measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
+  measlesY = random(height);
+  measlesDiameter = random(height*1/60, height*1/35);
+  fill(measlesColor);
+  ellipse(measlesX, measlesY, measlesDiameter, measlesDiameter);
+  fill(colorReset);
+  //Parameters are randomly set ;)
 }//End draw
 
 void keyPressed() {
